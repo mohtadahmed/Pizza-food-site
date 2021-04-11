@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Yatra One", cursive;
+}
+::selection {
+  background-color: black;
+  color: white;
+}
+.header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/image/Pizza-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav-section {
+  display: flex;
+}
+.logo img {
+  height: 100px;
+  margin: 25px;
+}
+.fa-window-close {
+  display: none;
+}
+.fa-bars {
+  display: none;
+}
+.nav-bar {
+  flex: 1;
+  margin-top: 55px;
+}
+.nav-bar ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 50px;
+}
+.nav-bar ul a {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+}
+.nav-bar ul li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: chartreuse;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-bar ul li:hover::after {
+  width: 100%;
+}
+.btn-section {
+  float: right;
+}
+.btn {
+  float: right;
+  margin-right: 20px;
+  padding: 8px;
+  background-color: transparent;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid snow;
+}
+.cart {
+  margin-right: 20px;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.main {
+  margin: 200px 250px;
+}
+.main h1 {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 70px;
+}
+.main span {
+  color: yellow;
+}
+.main button {
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 550;
+  font-family: monospace;
+  border: none;
+}
+.main button:hover {
+  cursor: pointer;
+}
+
+.pizza-head {
+  text-align: center;
+  margin: 30px;
+  background-color: black;
+  padding: 10px;
+}
+.pizza-head h1 {
+  color: yellow;
+  font-size: 40px;
+  padding: 15px;
+}
+.pizza-image {
+  display: grid;
+  grid-template-columns: auto;
+}
+.pizza-image img {
+  height: 50%;
+  width: 36%;
+}
+.pizza-image img:hover {
+  cursor: pointer;
+}
+.pizza-card {
+  display: flex;
+  margin: 50px 80px 50px 230px;
+}
+.pizza-card-detail {
+  margin: auto 50px;
+}
+.pizza-card-detail h2 {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.pizza-card-detail p {
+  text-align: justify;
+  margin-bottom: 25px;
+}
+.pizza-card-detail button {
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.pizza-card-detail button:hover {
+  color: black;
+  background-color: #95a5a6;
+}
+.contact-section {
+  background-color: #3d3d3d;
+  color: #f1f2f6;
+  font-size: 17px;
+  text-align: center;
+}
+.connect-details {
+  display: flex;
+}
+.location {
+  margin: 50px auto;
+}
+.location h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.location h5::after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background: chartreuse;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.location i {
+  margin-right: 10px;
+}
+.social-links {
+  margin: 50px auto;
+}
+.social-links h5 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.social-links a {
+  text-decoration: none;
+  margin: 20px;
+  font-size: 22px;
+  color: white;
+}
+.social-links i {
+  border: 1px solid white;
+  padding: 8px;
+  transition: all 0.5s;
+}
+.social-links a:hover .fa-facebook {
+  color: #3b5999;
+  transform: translate(0, -5px);
+  border: 1px solid #3b5999;
+}
+.social-links a:hover .fa-facebook-messenger {
+  color: #0084ff;
+  transform: translate(0, -5px);
+  border: 1px solid #0084ff;
+}
+.social-links a:hover .fa-instagram {
+  color: #ff4757;
+  transform: translate(0, -5px);
+  border: 1px solid #ff4757;
+}
+.social-links a:hover .fa-whatsapp {
+  color: #25d366;
+  transform: translate(0, -5px);
+  border: 1px solid #25d366;
+}
+.copyright {
+  padding: 15px;
+  background-color: black;
+}
+.copyright i {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 425px) {
+  /* Newly Added for Nav Bar */
+  .fa-bars {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: block;
+    color: white;
+    margin: 10px 25px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .fa-window-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    color: white;
+    font-size: 22px;
+    margin: 10px 25px;
+    cursor: pointer;
+  }
+  .nav-bar {
+    height: 100vh;
+    width: 200px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    text-align: left;
+    z-index: 2;
+    margin-top: 0px;
+    transition: 0.5s;
+  }
+
+  .nav-bar i {
+    margin: 8px;
+  }
+
+  .nav-bar ul a {
+    display: block;
+  }
+  .nav-bar ul {
+    margin: 30px 0px;
+  }
+  /* Ends Here */
+
+  .btn-section {
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+    right: 58%;
+    position: absolute;
+    text-align: left;
+    z-index: 2;
+  }
+  .btn {
+    margin-top: 10px;
+    padding: 10px !important;
+  }
+  .cart {
+    margin-top: 10px;
+  }
+  .main {
+    margin: 46px !important;
+  }
+
+  .pizza-head h1 {
+    font-size: 30px !important;
+  }
+
+  .pizza-card {
+    display: block !important;
+  }
+
+  .pizza-image img {
+    height: 42%;
+    width: 100%;
+  }
+  .pizza-card-detail {
+    margin: auto !important;
+  }
+  .pizza-card-detail h2 {
+    font-size: 16px;
+  }
+
+  .connect-details {
+    margin-top: 70px;
+  }
+  .location h5::after {
+    width: 37% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-section {
+    display: flex;
+  }
+  .logo img {
+    height: 80px;
+    margin: 15px;
+  }
+  .nav-bar ul li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .nav-bar ul a {
+    text-decoration: none;
+    padding: 5px;
+  }
+  .btn {
+    margin-right: 6px;
+    padding: 0px 3px;
+    font-size: 11px;
+  }
+  .cart {
+    margin-right: 10px;
+  }
+
+  .main {
+    margin: 70px;
+  }
+  .main h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+
+  .pizza-head {
+    margin: 20px;
+
+    padding: 6px;
+  }
+  .pizza-head h1 {
+    font-size: 32px;
+    padding: 10px;
+  }
+
+  .pizza-card {
+    display: flex;
+    margin: 30px;
+  }
+  .pizza-card-detail {
+    margin: auto 20px;
+  }
+  .pizza-card-detail h2 {
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+  .pizza-card-detail p {
+    margin-bottom: 0px;
+  }
+  .pizza-card-detail button {
+    padding: 6px 8px;
+  }
+  .connect-details {
+    display: block;
+    padding: 10px;
+  }
+  .location {
+    margin: 30px 20px;
+  }
+  .location h5::after {
+    width: 16%;
+  }
+  .social-links {
+    margin: 40px 15px;
+  }
+  .social-links a {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .nav-bar ul li {
+    margin-left: 0px;
+  }
+  .main {
+    top: 50%;
+    left: 50%;
+  }
+  .main h1 {
+    margin-bottom: 30px;
+    font-size: 46px;
+  }
+
+  .main button {
+    font-size: 15px;
+  }
+
+  .pizza-head h1 {
+    font-size: 32px;
+  }
+
+  .pizza-card {
+    display: flex;
+    margin: 30px 60px;
+  }
+  .pizza-card-detail {
+    margin: 0px 25px;
+  }
+  .pizza-card-detail h2 {
+    margin-bottom: 15px;
+  }
+  .pizza-card-detail p {
+    margin-bottom: 15px;
+  }
+  .pizza-card-detail button {
+    padding: 8px 10px;
+  }
+
+  .location {
+    margin: 50px auto;
+  }
+
+  .social-links {
+    margin: 50px auto;
+  }
+}
